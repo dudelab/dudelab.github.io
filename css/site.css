@@ -520,6 +520,12 @@ kbd {
   animation: float 6s ease-in-out infinite;
   animation-delay: calc(var(--i) * -1.7s);
 }
+.wip__icon {
+  width: clamp(120px, 16vw, 172px); height: auto; margin: -10px 0 -12px -12px;
+  filter: drop-shadow(0 14px 18px rgb(0 0 0 / 0.25));
+  animation: float 6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -1.7s);
+}
 .wip__stage { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 14px; font-weight: 500; color: var(--ink-2); }
 .wip__stage .dot { flex: none; background: var(--accent-ink); }
 .wip__name { margin-top: 6px; font: 500 clamp(32px, 4vw, 44px)/1 var(--serif); letter-spacing: -0.02em; }
