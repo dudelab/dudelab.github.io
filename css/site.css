@@ -530,6 +530,7 @@ kbd {
 .wip__stage .dot { flex: none; background: var(--accent-ink); }
 .wip__name { margin-top: 6px; font: 500 clamp(32px, 4vw, 44px)/1 var(--serif); letter-spacing: -0.02em; }
 .wip .card__tagline { margin-top: 18px; }
+.wip__try { margin-top: 24px; }
 .wip__points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .wip__points li { padding-top: 16px; border-top: 1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent); }
 .wip__points h3 { font: 500 19px/1.25 var(--serif); }
@@ -788,7 +789,7 @@ kbd {
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
   .btn { width: 100%; }
-  .card__actions .downloads, .phero .downloads, .final-cta .downloads { width: 100%; }
+  .card__actions .downloads, .phero .downloads, .final-cta .downloads, .wip__try { width: 100%; }
   .md-render { padding: 20px; }
   .md-demo__tab { min-width: 0; }
 }
