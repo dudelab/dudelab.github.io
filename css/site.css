@@ -837,6 +837,13 @@ kbd {
 .win-demo__new { justify-content: center; }
 .win-demo__caption { grid-column: 1 / -1; min-height: 1.5em; font: italic 400 19px/1.4 var(--serif); color: var(--ink-2); }
 
+/* ---------- closeups ---------- */
+
+.closeups { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 24px clamp(24px, 5vw, 72px); }
+.closeup { margin: 0; display: flex; flex-direction: column; align-items: center; max-width: 100%; }
+.closeup img { max-width: 100%; height: auto; }
+.closeup figcaption { max-width: 34ch; margin-top: 4px; text-align: center; font: italic 400 18px/1.4 var(--serif); color: var(--ink-2); }
+
 /* Screenshot frame for apps that live on the whole screen. */
 .window--screen { border-radius: 14px; }
 
