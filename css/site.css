@@ -722,6 +722,124 @@ kbd {
 @keyframes lift { to { transform: scale(0.6); opacity: 0; } }
 .goban.is-thinking { cursor: progress; }
 
+/* ---------- windows demo ---------- */
+
+.win-demo { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px clamp(24px, 3vw, 40px); align-items: start; }
+.win-demo__screen {
+  --wall: radial-gradient(120% 90% at 85% 0%, #c08cff 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #3b2bb8 0%, transparent 60%), linear-gradient(160deg, #8a63f0, #5232c9 60%, #2c1f86);
+  --menubar: rgb(255 255 255 / 0.55);
+  --menubar-ink: #1d1a2a;
+  --win: #fdfcff;
+  --win-bar: #f1eff6;
+  --win-line: rgb(30 20 60 / 0.12);
+  --win-ink: #3a3550;
+  --skel: rgb(40 30 80 / 0.12);
+  --glyph-on: #5b3cc4;
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 1440 / 900;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--wall);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.1), var(--shadow-lg);
+  user-select: none;
+  -webkit-user-select: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .win-demo__screen {
+    --wall: radial-gradient(120% 90% at 85% 0%, #6a3fc0 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #1d1670 0%, transparent 60%), linear-gradient(160deg, #3d2a8a, #251a6b 60%, #120d3a);
+    --menubar: rgb(20 16 40 / 0.6);
+    --menubar-ink: #ece9f7;
+    --win: #26232f;
+    --win-bar: #2f2c39;
+    --win-line: rgb(0 0 0 / 0.5);
+    --win-ink: #cfcae0;
+    --skel: rgb(255 255 255 / 0.1);
+    --glyph-on: #b3a0ff;
+  }
+}
+:root[data-theme='dark'] .win-demo__screen {
+  --wall: radial-gradient(120% 90% at 85% 0%, #6a3fc0 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #1d1670 0%, transparent 60%), linear-gradient(160deg, #3d2a8a, #251a6b 60%, #120d3a);
+  --menubar: rgb(20 16 40 / 0.6);
+  --menubar-ink: #ece9f7;
+  --win: #26232f;
+  --win-bar: #2f2c39;
+  --win-line: rgb(0 0 0 / 0.5);
+  --win-ink: #cfcae0;
+  --skel: rgb(255 255 255 / 0.1);
+  --glyph-on: #b3a0ff;
+}
+/* Everything inside the screen is sized in cqw, so it scales like a real display. */
+.win-demo__menubar {
+  position: absolute; inset: 0 0 auto; height: 2.22cqw; padding: 0 1.2cqw;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--menubar); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  color: var(--menubar-ink); font: 500 1.05cqw/1 var(--sans);
+}
+.win-demo__menus, .win-demo__status { display: flex; align-items: center; gap: 1.5cqw; }
+.win-demo__menus svg { width: 1.2cqw; height: 1.2cqw; }
+.win-demo__menus b { font-weight: 700; }
+.win-demo__glyph { width: 1.3cqw; height: 1.3cqw; }
+.win-demo__desk { position: absolute; inset: 2.22cqw 0 0; }
+
+.dwin {
+  position: absolute;
+  display: flex; flex-direction: column;
+  border-radius: 0.8cqw;
+  overflow: hidden;
+  background: var(--win);
+  box-shadow: 0 0 0 1px var(--win-line), 0 0.4cqw 1.6cqw rgb(10 0 40 / 0.18);
+  transition: left 0.5s var(--ease), top 0.5s var(--ease), width 0.5s var(--ease), height 0.5s var(--ease), box-shadow 0.3s;
+  touch-action: none;
+}
+.dwin.is-active { box-shadow: 0 0 0 1px var(--win-line), 0 1.2cqw 3.6cqw rgb(10 0 40 / 0.4); }
+.dwin.is-dragging { transition: box-shadow 0.3s; }
+.dwin__bar {
+  flex: none; display: flex; align-items: center; gap: 1cqw;
+  height: 2.4cqw; padding: 0 0.9cqw;
+  background: var(--win-bar); border-bottom: 1px solid var(--win-line);
+  cursor: grab;
+}
+.dwin.is-dragging .dwin__bar { cursor: grabbing; }
+.dwin__lights { display: flex; gap: 0.5cqw; }
+.dwin__lights > * { width: 0.85cqw; height: 0.85cqw; padding: 0; border: 0; border-radius: 50%; background: var(--skel); }
+.dwin.is-active .dwin__lights > * { background: #28c840; }
+.dwin.is-active .dwin__lights > :nth-child(2) { background: #febc2e; }
+.dwin.is-active .dwin__lights button { background: #ff5f57; cursor: pointer; }
+.dwin__lights button:disabled { cursor: default; }
+.dwin__lights button::before { content: ''; position: absolute; inset: -0.6cqw; }
+.dwin__lights button { position: relative; }
+.dwin__title { flex: 1; margin-right: 3.5cqw; overflow: hidden; text-align: center; white-space: nowrap; text-overflow: ellipsis; font: 600 1.05cqw var(--sans); color: var(--win-ink); opacity: 0.6; }
+.dwin.is-active .dwin__title { opacity: 1; }
+.dwin__body { display: flex; flex-direction: column; gap: 0.75cqw; padding: 1.6cqw 1.8cqw; overflow: hidden; }
+.dwin__body b { flex: none; width: 40%; height: 1.2cqw; margin-bottom: 0.5cqw; border-radius: 0.3cqw; background: hsl(var(--h) 70% 60%); }
+.dwin__body i { flex: none; height: 0.6cqw; border-radius: 0.3cqw; background: var(--skel); }
+.dwin__body br { display: block; content: ''; }
+
+.win-demo__panel { display: flex; flex-direction: column; gap: 12px; width: 236px; }
+.win-demo__keys { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.win-demo__arrows { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.win-key {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
+  font: 500 14.5px var(--sans); text-align: left; cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.win-key:hover { border-color: var(--accent-ink); color: var(--ink); }
+.win-key:active { transform: scale(0.96); }
+.win-key kbd {
+  flex: none; display: grid; place-items: center; min-width: 28px; height: 28px; padding: 0 6px;
+  border-radius: 8px; border: 1px solid var(--line-2); border-bottom-width: 2px;
+  background: var(--paper); color: var(--accent-ink); font: 600 14px var(--sans);
+}
+.win-key--arrow { justify-content: center; padding: 6px; }
+.win-demo__new { justify-content: center; }
+.win-demo__caption { grid-column: 1 / -1; min-height: 1.5em; font: italic 400 19px/1.4 var(--serif); color: var(--ink-2); }
+
+/* Screenshot frame for apps that live on the whole screen. */
+.window--screen { border-radius: 14px; }
+
 /* ---------- footer ---------- */
 
 .footer { padding: 56px 0 40px; border-top: 1px solid var(--line); }
@@ -755,6 +873,11 @@ kbd {
   .go-demo { grid-template-columns: 1fr; }
   .go-demo__board { order: -1; }
   .md-demo { grid-template-columns: 1fr; }
+  .win-demo { grid-template-columns: 1fr; }
+  .win-demo__panel { width: auto; flex-direction: row; flex-wrap: wrap; align-items: stretch; }
+  .win-demo__keys { flex: 1 1 100%; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .win-demo__arrows { flex: 1 1 auto; }
+  .win-demo__new { flex: 1 1 auto; width: auto; }
   .wip { grid-template-columns: minmax(0, 1fr); }
   .sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .wip__badge { flex-direction: row; align-items: center; flex-wrap: wrap; }
@@ -792,6 +915,8 @@ kbd {
   .card__actions .downloads, .phero .downloads, .final-cta .downloads, .wip__try { width: 100%; }
   .md-render { padding: 20px; }
   .md-demo__tab { min-width: 0; }
+  .win-key { flex-direction: column; gap: 4px; padding: 8px 4px; font-size: 12.5px; text-align: center; }
+  .win-demo__arrows, .win-demo__new { flex-basis: 100%; }
 }
 @media (max-width: 400px) {
   .topbar .brand span { display: none; }
