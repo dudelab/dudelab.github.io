@@ -1,4 +1,4 @@
-// A small screen with the windows of one program, arranged with the same rules as Finestre.
+// A small screen with the windows of one program, arranged with the same rules as Tilo.
 (() => {
   const root = document.querySelector('[data-win-demo]');
   if (!root) return;
@@ -114,7 +114,7 @@
     render();
   }
 
-  // ---------- layouts, as in Finestre.swift ----------
+  // ---------- layouts, as in Tilo.swift ----------
 
   const snap = () => wins.map((w) => ({ w, r: { ...w.r } }));
   const same = (a, b) =>
