@@ -46,4 +46,15 @@
   if (!isMac && isDesktop) {
     document.querySelectorAll('[data-other-os]').forEach((el) => (el.hidden = false));
   }
+
+  // The visitor's own system leads: its download comes first and stays primary, the others step back.
+  const os = isMac ? 'macos' : /Windows/.test(ua) ? 'windows' : null;
+  if (os) {
+    document.querySelectorAll('[data-downloads]').forEach((box) => {
+      const mine = box.querySelector(`a[data-os="${os}"]`);
+      if (!mine) return;
+      box.querySelectorAll('a[data-os]').forEach((a) => a !== mine && a.classList.replace('btn--primary', 'btn--ghost'));
+      box.prepend(mine);
+    });
+  }
 })();

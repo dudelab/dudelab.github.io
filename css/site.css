@@ -218,7 +218,6 @@ body::before {
 .btn--ghost:hover { border-color: var(--ink-3); color: var(--ink); }
 .btn--soon { cursor: default; opacity: 0.7; }
 .btn--soon:hover { border-color: var(--line-2); color: var(--ink-2); }
-.downloads.is-preferred-missing .btn--primary { order: 2; }
 
 .link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15.5px; text-decoration: none; color: var(--accent-ink); }
 .link-arrow svg { width: 18px; height: 18px; transition: transform 0.3s var(--ease); }
@@ -442,6 +441,9 @@ kbd {
 /* ---------- install steps ---------- */
 
 .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps__os { display: flex; align-items: center; gap: 10px; margin: 8px 0 22px; font: 600 15px/1.2 var(--sans); color: var(--ink-2); }
+.steps__os:not(:first-child) { margin-top: 18px; padding-top: 30px; border-top: 1px solid var(--line); }
+.steps__os svg { width: 20px; height: 20px; color: var(--accent-ink); }
 .steps li { counter-increment: s; position: relative; padding: 0 0 34px 72px; }
 .steps li::before {
   content: counter(s);

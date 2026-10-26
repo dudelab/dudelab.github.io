@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "notes": "Icona nuova con il leone rosso. Tema chiaro o scuro a scelta. Pagine raddrizzate dalle miniature o con Ctrl+R e Ctrl+L. Aggiornamenti automatici. Installatore in italiano. Guida in PDF.",
+  "pub_date": "2026-10-26T14:28:16Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5anNEdnVYRGF6WlpTVVBVU0kwN21xdndNWVBKMUV6djJ1dU94VytZeTUwSHgyZk8yRnlLTzJ4dG9Ya2c5TWhEZ01mSmZJRlNqOEd6WjZQcEtSRDY3Z0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfeDY0LXNldHVwLmV4ZQpPSEphS2g1bk9sRll6VWFxN1ZicHlSNCtpQnRmaVJRd2FCcm9oaTF4RXFTNlZpOW92aDlxSXg3cy95am9BNitMK29iQWQ3R2p1RVRnRkRNVHJ2aklEdz09Cg=="
+    },
+    "darwin-aarch64": {
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5amdlOWhQZGhlaklkNTQ4S0ltOFlzVG5ETmxId0psMy9Hb1VUZ3h4bFQvRUxtZm04UkJMY1dnRmQ2amxuUkxUSFltd3puRmdqZU16blgrZG9KRjQxV0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKQVNOWkFadE93Tm5YaVBtVTFXRW0yRmhoZ3ZVd0w5cnBEWVd5VHJHTW9WZzd1MHZzWGNHdExyV2NBRlFLTDFnLzJBMzNUTm9mWGVHOHMzbnFoUFAvRFE9PQo="
+    },
+    "darwin-x86_64": {
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5amdlOWhQZGhlaklkNTQ4S0ltOFlzVG5ETmxId0psMy9Hb1VUZ3h4bFQvRUxtZm04UkJMY1dnRmQ2amxuUkxUSFltd3puRmdqZU16blgrZG9KRjQxV0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKQVNOWkFadE93Tm5YaVBtVTFXRW0yRmhoZ3ZVd0w5cnBEWVd5VHJHTW9WZzd1MHZzWGNHdExyV2NBRlFLTDFnLzJBMzNUTm9mWGVHOHMzbnFoUFAvRFE9PQo="
+    }
+  }
+}
