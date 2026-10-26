@@ -1,19 +1,19 @@
 {
-  "version": "0.2.0",
-  "notes": "Icona nuova con il leone rosso. Tema chiaro o scuro a scelta. Pagine raddrizzate dalle miniature o con Ctrl+R e Ctrl+L. Aggiornamenti automatici. Installatore in italiano. Guida in PDF.",
-  "pub_date": "2026-10-26T14:28:16Z",
+  "version": "0.3.0",
+  "notes": "Aggiornamenti cercati una volta alla settimana, con il pulsante Cerca aggiornamenti per guardare subito. Al primo avvio LeonePDF chiede se aprire sempre i PDF con lui. Invia per mail, senza un programma di posta, apre subito la cartella con il file da allegare.",
+  "pub_date": "2026-10-26T16:51:28Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5anNEdnVYRGF6WlpTVVBVU0kwN21xdndNWVBKMUV6djJ1dU94VytZeTUwSHgyZk8yRnlLTzJ4dG9Ya2c5TWhEZ01mSmZJRlNqOEd6WjZQcEtSRDY3Z0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfeDY0LXNldHVwLmV4ZQpPSEphS2g1bk9sRll6VWFxN1ZicHlSNCtpQnRmaVJRd2FCcm9oaTF4RXFTNlZpOW92aDlxSXg3cy95am9BNitMK29iQWQ3R2p1RVRnRkRNVHJ2aklEdz09Cg=="
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.3.0_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5anRZWmJySjl5TUdQWE5tYkkweHRxbnlGMjM3UnV3aHRzVkJGSTR6d1Z6YmtWenFpd0pESVpPZGNZblZmZVQ3amcrNTN3NlJvemwvK0h0Ym1XTXo5T2cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDMzNDg3CWZpbGU6TGVvbmVQREZfMC4zLjBfeDY0LXNldHVwLmV4ZQpoOEhXVm51cmp2RUFaZURsVkdBQlA0S2pBaDZZNXFBc3dkOVpicU5YOU05b1VGcWE1UVNmQkJLTEUvVjJIRENJVkEvend5SXlUSHZiYXJ3VC82a3RBUT09Cg=="
     },
     "darwin-aarch64": {
-      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5amdlOWhQZGhlaklkNTQ4S0ltOFlzVG5ETmxId0psMy9Hb1VUZ3h4bFQvRUxtZm04UkJMY1dnRmQ2amxuUkxUSFltd3puRmdqZU16blgrZG9KRjQxV0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKQVNOWkFadE93Tm5YaVBtVTFXRW0yRmhoZ3ZVd0w5cnBEWVd5VHJHTW9WZzd1MHZzWGNHdExyV2NBRlFLTDFnLzJBMzNUTm9mWGVHOHMzbnFoUFAvRFE9PQo="
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.3.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5anVNeUZtejhhaTNMOFZqVTl3TnFWR1lVUG1VZUYrbXNkWEVSYzdldmJuNmxrWUs2MGNwY0NqNHZrYlY4dFpjK1JBallvcXVoQmVUenQ5alFLWmQyQndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDMzNDg4CWZpbGU6TGVvbmVQREZfMC4zLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKdWRVVitHdit2ZXZFUkdIL2N4TVY1Yi9kb2h0cWJPeUZzNWM1blRQa29GLzRhdnIweklidEo4eXZNeG5LdWZsMWNwbWh6MEhiWnJkSk9LeWswMVBTRFE9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://dudelab.github.io/downloads/LeonePDF_0.2.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5amdlOWhQZGhlaklkNTQ4S0ltOFlzVG5ETmxId0psMy9Hb1VUZ3h4bFQvRUxtZm04UkJMY1dnRmQ2amxuUkxUSFltd3puRmdqZU16blgrZG9KRjQxV0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDI0ODk2CWZpbGU6TGVvbmVQREZfMC4yLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKQVNOWkFadE93Tm5YaVBtVTFXRW0yRmhoZ3ZVd0w5cnBEWVd5VHJHTW9WZzd1MHZzWGNHdExyV2NBRlFLTDFnLzJBMzNUTm9mWGVHOHMzbnFoUFAvRFE9PQo="
+      "url": "https://dudelab.github.io/downloads/LeonePDF_0.3.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUzF0RXZvWGl5anVNeUZtejhhaTNMOFZqVTl3TnFWR1lVUG1VZUYrbXNkWEVSYzdldmJuNmxrWUs2MGNwY0NqNHZrYlY4dFpjK1JBallvcXVoQmVUenQ5alFLWmQyQndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMDMzNDg4CWZpbGU6TGVvbmVQREZfMC4zLjBfdW5pdmVyc2FsLmFwcC50YXIuZ3oKdWRVVitHdit2ZXZFUkdIL2N4TVY1Yi9kb2h0cWJPeUZzNWM1blRQa29GLzRhdnIweklidEo4eXZNeG5LdWZsMWNwbWh6MEhiWnJkSk9LeWswMVBTRFE9PQo="
     }
   }
 }
