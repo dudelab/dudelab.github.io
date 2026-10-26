@@ -732,15 +732,15 @@ kbd {
 
 .win-demo { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px clamp(24px, 3vw, 40px); align-items: start; }
 .win-demo__screen {
-  --wall: radial-gradient(120% 90% at 85% 0%, #c08cff 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #3b2bb8 0%, transparent 60%), linear-gradient(160deg, #8a63f0, #5232c9 60%, #2c1f86);
+  --wall: radial-gradient(120% 90% at 85% 0%, #ffbf8a 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #8f3410 0%, transparent 60%), linear-gradient(160deg, #ec8a4f, #c9572a 60%, #7d2d0f);
   --menubar: rgb(255 255 255 / 0.55);
-  --menubar-ink: #1d1a2a;
-  --win: #fdfcff;
-  --win-bar: #f1eff6;
-  --win-line: rgb(30 20 60 / 0.12);
-  --win-ink: #3a3550;
-  --skel: rgb(40 30 80 / 0.12);
-  --glyph-on: #5b3cc4;
+  --menubar-ink: #2a1d16;
+  --win: #fffdfb;
+  --win-bar: #f5f1ed;
+  --win-line: rgb(60 30 10 / 0.12);
+  --win-ink: #4a3b31;
+  --skel: rgb(80 45 20 / 0.12);
+  --glyph-on: #b04e1a;
   position: relative;
   container-type: inline-size;
   aspect-ratio: 1440 / 900;
@@ -753,27 +753,27 @@ kbd {
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .win-demo__screen {
-    --wall: radial-gradient(120% 90% at 85% 0%, #6a3fc0 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #1d1670 0%, transparent 60%), linear-gradient(160deg, #3d2a8a, #251a6b 60%, #120d3a);
-    --menubar: rgb(20 16 40 / 0.6);
-    --menubar-ink: #ece9f7;
-    --win: #26232f;
-    --win-bar: #2f2c39;
+    --wall: radial-gradient(120% 90% at 85% 0%, #a9501f 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #3a1406 0%, transparent 60%), linear-gradient(160deg, #6f2e12, #4b1d0a 60%, #210c04);
+    --menubar: rgb(40 20 10 / 0.6);
+    --menubar-ink: #f4ece6;
+    --win: #2a2623;
+    --win-bar: #332f2b;
     --win-line: rgb(0 0 0 / 0.5);
-    --win-ink: #cfcae0;
+    --win-ink: #ddd2c9;
     --skel: rgb(255 255 255 / 0.1);
-    --glyph-on: #b3a0ff;
+    --glyph-on: #f39a62;
   }
 }
 :root[data-theme='dark'] .win-demo__screen {
-  --wall: radial-gradient(120% 90% at 85% 0%, #6a3fc0 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #1d1670 0%, transparent 60%), linear-gradient(160deg, #3d2a8a, #251a6b 60%, #120d3a);
-  --menubar: rgb(20 16 40 / 0.6);
-  --menubar-ink: #ece9f7;
-  --win: #26232f;
-  --win-bar: #2f2c39;
+  --wall: radial-gradient(120% 90% at 85% 0%, #a9501f 0%, transparent 55%), radial-gradient(90% 80% at 0% 100%, #3a1406 0%, transparent 60%), linear-gradient(160deg, #6f2e12, #4b1d0a 60%, #210c04);
+  --menubar: rgb(40 20 10 / 0.6);
+  --menubar-ink: #f4ece6;
+  --win: #2a2623;
+  --win-bar: #332f2b;
   --win-line: rgb(0 0 0 / 0.5);
-  --win-ink: #cfcae0;
+  --win-ink: #ddd2c9;
   --skel: rgb(255 255 255 / 0.1);
-  --glyph-on: #b3a0ff;
+  --glyph-on: #f39a62;
 }
 /* Everything inside the screen is sized in cqw, so it scales like a real display. */
 .win-demo__menubar {
@@ -794,11 +794,11 @@ kbd {
   border-radius: 0.8cqw;
   overflow: hidden;
   background: var(--win);
-  box-shadow: 0 0 0 1px var(--win-line), 0 0.4cqw 1.6cqw rgb(10 0 40 / 0.18);
+  box-shadow: 0 0 0 1px var(--win-line), 0 0.4cqw 1.6cqw rgb(40 15 0 / 0.18);
   transition: left 0.5s var(--ease), top 0.5s var(--ease), width 0.5s var(--ease), height 0.5s var(--ease), box-shadow 0.3s;
   touch-action: none;
 }
-.dwin.is-active { box-shadow: 0 0 0 1px var(--win-line), 0 1.2cqw 3.6cqw rgb(10 0 40 / 0.4); }
+.dwin.is-active { box-shadow: 0 0 0 1px var(--win-line), 0 1.2cqw 3.6cqw rgb(40 15 0 / 0.4); }
 .dwin.is-dragging { transition: box-shadow 0.3s; }
 .dwin__bar {
   flex: none; display: flex; align-items: center; gap: 1cqw;
