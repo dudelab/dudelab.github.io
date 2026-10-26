@@ -282,7 +282,11 @@ body::before {
 .hero__title em { font-style: italic; font-weight: 350; color: var(--seal); font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1; }
 .hero__lead { margin-top: 26px; max-width: 34em; font-size: clamp(17px, 2vw, 20px); color: var(--ink-2); text-wrap: balance; }
 
-.shelf { display: flex; justify-content: center; align-items: flex-end; flex-wrap: wrap; gap: clamp(18px, 4vw, 48px); margin-top: clamp(44px, 7vw, 76px); }
+.shelf {
+  display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); align-items: end;
+  width: min(100%, calc(var(--n) * 196px)); gap: clamp(12px, 2.5vw, 32px);
+  margin-top: clamp(44px, 7vw, 76px);
+}
 .shelf__item {
   display: flex; flex-direction: column; align-items: center; gap: 14px;
   text-decoration: none;
@@ -290,7 +294,7 @@ body::before {
   animation-delay: calc(var(--i) * -1.7s);
 }
 .shelf__item img {
-  width: clamp(104px, 15vw, 168px); height: auto;
+  width: min(100%, 168px); height: auto;
   filter: drop-shadow(0 22px 22px rgb(60 40 10 / 0.28));
   transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
 }
@@ -299,8 +303,8 @@ body::before {
 .shelf__item:hover .shelf__label { color: var(--ink); }
 .shelf__slot {
   display: grid; place-items: center;
-  width: clamp(84px, 12vw, 134px); aspect-ratio: 1;
-  margin: clamp(10px, 1.5vw, 17px);
+  width: min(80%, 134px); aspect-ratio: 1;
+  margin: min(10%, 17px);
   border: 2px dashed var(--line-2);
   border-radius: 28%;
 }
@@ -900,6 +904,7 @@ kbd {
   .md-demo textarea { min-height: 280px; }
 }
 @media (max-width: 640px) {
+  .shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
   body { font-size: 16px; }
   .nav a { padding: 8px 6px; font-size: 14.5px; }
   .nav a[href$='#novita'], .nav a[href$='#software'] { display: none; }
